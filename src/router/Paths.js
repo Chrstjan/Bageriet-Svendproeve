@@ -8,19 +8,19 @@ export const Paths = [
     text: "Forside",
   },
   {
-    path: "/",
+    path: "/pr",
     element: LandingPage,
-    text: "Forside",
+    text: "Produkter",
   },
   {
-    path: "/",
+    path: "/kopn",
     element: LandingPage,
-    text: "Forside",
+    text: "Kontakt",
   },
   {
-    path: "/",
+    path: "/login",
     element: LandingPage,
-    text: "Forside",
+    text: "Login",
   },
   {
     path: "/*",

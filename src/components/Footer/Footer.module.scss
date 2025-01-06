@@ -1,0 +1,45 @@
+@use "../../styles/mixins" as m;
+@use "../../styles/variables" as *;
+@use "../../styles/placeholders";
+
+.footerStyling {
+  @include m.flexBox(column, center, center, 0rem);
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  background: $dark-grey;
+  width: 100vw;
+
+  .circleContainer {
+    justify-content: center;
+    align-items: center;
+    background: $form-background;
+    border-radius: 50%;
+    padding: 0.3rem;
+    margin-top: -1.3rem;
+  }
+
+  h3 {
+    @extend %headerText;
+    margin-bottom: 0;
+  }
+
+  p {
+    @extend %LobsterFont;
+    color: $light-grey;
+    max-width: 250px;
+    margin-left: 1rem;
+  }
+
+  .copyrightContainer {
+    display: block;
+    background: $dark-color;
+    height: 4vh;
+    width: 100vw;
+    margin-bottom: 0.5rem;
+
+    p {
+      line-height: 0.1rem;
+    }
+  }
+}

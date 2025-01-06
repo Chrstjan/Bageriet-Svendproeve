@@ -1,0 +1,8 @@
+.iconStyling {
+  display: block;
+
+  &.upArrow {
+    width: 8vw;
+    transform: rotate(-90deg);
+  }
+}

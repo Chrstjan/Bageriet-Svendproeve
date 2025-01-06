@@ -1,0 +1,38 @@
+@use "../../styles/mixins" as m;
+@use "../../styles/variables" as *;
+@use "../../styles/placeholders";
+
+.hiddenStyling {
+  li {
+    display: none;
+  }
+}
+
+.navStyling {
+  @include m.flexBox(row, space-evenly, center, 0.6rem);
+  @extend %LobsterFont;
+  background: $background-color;
+  margin: 0;
+  padding: 0;
+  padding-top: 0.5rem;
+  padding-bottom: 0.8rem;
+  padding-left: 2rem;
+  overflow-x: scroll;
+
+  h2 {
+    @extend %headerText;
+    font-size: 30px;
+    margin: 0;
+  }
+
+  li {
+    list-style-type: none;
+
+    a {
+      @extend %LobsterFont;
+      color: $grey-color;
+      text-decoration: none;
+      font-size: 14px;
+    }
+  }
+}

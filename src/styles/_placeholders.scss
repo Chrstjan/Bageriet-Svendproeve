@@ -1,17 +1,53 @@
+@use "./variables" as *;
+
 @font-face {
   font-family: Lobster;
   src: url("/fonts/fonts/Lobster1.4.otf");
 }
 
 @font-face {
-  font-family: OpenSans;
+  font-family: OpenSansReg;
   src: url("/fonts/OpenSans-Regular.ttf");
+}
+
+@font-face {
+  font-family: OpenSansBold;
+  src: url("/fonts/OpenSans-Bold.ttf");
+}
+
+@font-face {
+  font-family: OpenSansBoldItalic;
+  src: url("/fonts/OpenSans-BoldItalic.ttf");
+}
+
+@font-face {
+  font-family: OpenSansExBoldItalic;
+  src: url("/fonts/OpenSans-ExtraBoldItalic.ttf");
 }
 
 %LobsterFont {
   font-family: Lobster, sans-serif;
 }
 
-%OpenSansFont {
-  font-family: OpenSans, sans-serif;
+%OpenSansRegFont {
+  font-family: OpenSansReg, sans-serif;
+}
+
+%OpenSansBoldFont {
+  font-family: OpenSansBold, sans-serif;
+}
+
+%OpenSansBoldItalicFont {
+  font-family: OpenSansBoldItalic, sans-serif;
+}
+
+%OpenSansExBoldItalicFont {
+  font-family: OpenSansExBoldItalic, sans-serif;
+}
+
+%headerText {
+  color: $white-color;
+  @extend %OpenSansBoldItalicFont;
+  font-weight: 700;
+  font-size: 22px;
 }
