@@ -1,12 +1,13 @@
 import { Paths } from "../../router/Paths";
 
 export const Navbar = () => {
-  const navMenu = [
-    {
-      path: Paths.home,
-      text: "Home",
-    },
-  ];
-
-  return <nav></nav>;
+  return (
+    <nav>
+      <ul>
+        {Paths.slice(0, 4).map((item) => {
+          return <li key={item.text}>{item.text}</li>;
+        })}
+      </ul>
+    </nav>
+  );
 };
