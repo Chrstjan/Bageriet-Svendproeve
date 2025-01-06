@@ -2,9 +2,15 @@ import { Icon } from "../Icon/Icon";
 import s from "./Footer.module.scss";
 
 export const Footer = () => {
+  const handleToTop = () => {
+    window.scrollTo({
+      top: 0,
+    });
+  };
+
   return (
     <footer className={s.footerStyling}>
-      <span className={s.circleContainer}>
+      <span onClick={() => handleToTop()} className={s.circleContainer}>
         <Icon src={"/images/chevron.png"} type="upArrow" />
       </span>
       <h3>bageriet</h3>

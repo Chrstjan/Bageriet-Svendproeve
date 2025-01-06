@@ -1,4 +1,5 @@
 import { LandingPage } from "../pages/LandingPage";
+import { ProductPage } from "../pages/ProductPage";
 import { PageNotFound } from "../pages/PageNotFound";
 
 export const Paths = [
@@ -11,6 +12,10 @@ export const Paths = [
     path: "/pr",
     element: LandingPage,
     text: "Produkter",
+  },
+  {
+    path: "/produkter/:productID",
+    element: ProductPage,
   },
   {
     path: "/kopn",

@@ -1,0 +1,18 @@
+@use "../../styles/variables" as *;
+@use "../../styles/placeholders";
+
+.buttonStyling {
+  &:hover {
+    cursor: pointer;
+  }
+
+  &.moreButton {
+    @extend %borderButton;
+    margin-left: 4rem;
+  }
+
+  &.likeButton {
+    @extend %borderButton;
+    margin-left: 6rem;
+  }
+}
