@@ -9,7 +9,7 @@ export const PageRouter = () => {
         {Paths.map((item) => {
           return (
             <Route
-              key={item.text}
+              key={item.path}
               path={item.path}
               element={<item.element />}
             />

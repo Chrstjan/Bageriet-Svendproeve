@@ -16,6 +16,12 @@ export const ProductPage = () => {
     `https://api.mediehuset.net/bakeonline/products/${Object.values(productID)}`
   );
 
+  useEffect(() => {
+    if (data) {
+      setProduct([data?.item]);
+    }
+  }, [data]);
+
   if (isLoading) {
     return <h2>Loading...</h2>;
   }
@@ -23,12 +29,6 @@ export const ProductPage = () => {
   if (error) {
     return <h2>Error in fetch, try again</h2>;
   }
-
-  useEffect(() => {
-    if (data) {
-      setProduct([data?.item]);
-    }
-  }, [data]);
 
   return (
     <>

@@ -1,6 +1,9 @@
 import { LandingPage } from "../pages/LandingPage";
 import { ProductPage } from "../pages/ProductPage";
 import { PageNotFound } from "../pages/PageNotFound";
+import { ProductsPage } from "../pages/ProductsPage";
+import { ContactPage } from "../pages/ContactPage";
+import { LoginPage } from "../pages/LoginPage";
 
 export const Paths = [
   {
@@ -9,8 +12,8 @@ export const Paths = [
     text: "Forside",
   },
   {
-    path: "/pr",
-    element: LandingPage,
+    path: "/produkter",
+    element: ProductsPage,
     text: "Produkter",
   },
   {
@@ -18,13 +21,13 @@ export const Paths = [
     element: ProductPage,
   },
   {
-    path: "/kopn",
-    element: LandingPage,
+    path: "/kontakt",
+    element: ContactPage,
     text: "Kontakt",
   },
   {
     path: "/login",
-    element: LandingPage,
+    element: LoginPage,
     text: "Login",
   },
   {

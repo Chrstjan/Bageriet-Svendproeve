@@ -1,0 +1,12 @@
+@use "../../styles/mixins" as m;
+
+.categoriesStyling {
+  @include m.flexBox(row, flex-start, flex-start, 1rem);
+  padding: 0;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  overflow-x: auto;
+  li {
+    list-style-type: none;
+  }
+}
