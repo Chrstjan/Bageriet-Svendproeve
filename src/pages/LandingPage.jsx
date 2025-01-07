@@ -5,6 +5,8 @@ import { Products } from "../components/Products/Products";
 import { Wrapper } from "../components/Wrapper/Wrapper";
 import { PageHeader } from "../components/PageHeader/PageHeader";
 import { Newsletter } from "../components/Newsletter/Newsletter";
+import { Card } from "../components/Card/Card";
+import { Slider } from "../components/Slider/Slider";
 
 export const LandingPage = () => {
   const [products, setProducts] = useState([]);
@@ -30,6 +32,13 @@ export const LandingPage = () => {
 
   return (
     <>
+      <Slider />
+      <Wrapper>
+        <PageHeader headerText="Vi skaber lækkert! brød" subText="Der er mange tilgænglige udgaver af Lorem Ipsum, men de fleste udgaver har gennemgået forandringer, når nogen har tilføjet humor eller tilfældige ord, som på ingen måde ser ægte ud"/>
+        <Card src="/images/article.jpg" headerText="Kreativitet Dyrkes" subText="Der er mange tilgænglige udgaver af Lorem Ipsum, men de fleste udgaver har gennemgået forandringer, når nogen har"/>
+        <Card src="/images/article2.jpg" headerText="Vi elsker brød" subText="Der er mange tilgænglige udgaver af Lorem Ipsum, men de fleste udgaver har gennemgået forandringer, når nogen har"/>
+        <Card src="/images/article3.jpg" headerText="Sans for detaljer" subText="Der er mange tilgænglige udgaver af Lorem Ipsum, men de fleste udgaver har gennemgået forandringer, når nogen har"/>
+      </Wrapper>
       <Wrapper>
         <Newsletter />
       </Wrapper>

@@ -1,0 +1,18 @@
+@use "../../styles/mixins" as m;
+@use "../../styles/variables" as *;
+@use "../../styles/placeholders";
+
+.cardStyling {
+    @include m.flexBox(column, center, center, 1rem);
+    @extend %LobsterFont;
+    text-align: center;
+
+    img {
+        width: 50vw;
+        border-radius: 50%;
+    }
+
+    p {
+        color: $light-grey;
+    }
+}

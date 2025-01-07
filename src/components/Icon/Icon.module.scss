@@ -8,6 +8,17 @@
     transform: rotate(-90deg);
   }
 
+  &.slideArrow {
+    width: 8vw;
+    height: 4vh;
+  }
+
+  &.slideArrowRev {
+    width: 8vw;
+    height: 4vh;
+    transform: rotate(180deg);
+  }
+
   &.inputIcon {
     width: 6vw;
     background: $light-blue-background;
