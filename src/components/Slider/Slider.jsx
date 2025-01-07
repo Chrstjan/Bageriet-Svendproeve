@@ -11,7 +11,7 @@ export const Slider = () => {
   const [slideIndex, setSlideIndex] = useState(0);
 
   const nextSlide = () => {
-    if (slideIndex === 2) {
+    if (slideIndex === imageArray.length - 1) {
         setSlideIndex(0);
     }
     else {
@@ -21,7 +21,7 @@ export const Slider = () => {
 
   const prevSlide = () => {
     if (slideIndex === 0) {
-        setSlideIndex(2)
+        setSlideIndex(imageArray.length - 1)
     }
     else {
         setSlideIndex(slideIndex - 1);
@@ -29,11 +29,11 @@ export const Slider = () => {
   }
 
   useEffect(() => {
-    let timer = setInterval(() => {
+    let timer = setTimeout(() => {
         nextSlide();
     }, 3500);
     return () => {
-        clearInterval(timer);
+        clearTimeout(timer);
     }
   }, [slideIndex])
   
@@ -47,9 +47,9 @@ export const Slider = () => {
         </span>
         <h2>Vi elsker at lave brød</h2>
         <div className={s.circleContainer}>
-            <span className={s.circleStyling}></span>
-            <span className={s.circleStyling}></span>
-            <span className={s.circleStyling}></span>
+            <span onClick={() => setSlideIndex(0)} className={`${s.circleStyling}`}></span>
+            <span onClick={() => setSlideIndex(1)} className={`${s.circleStyling}`}></span>
+            <span onClick={() => setSlideIndex(2)} className={`${s.circleStyling}`}></span>
         </div>
     </div>
   )

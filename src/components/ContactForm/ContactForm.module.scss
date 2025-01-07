@@ -1,0 +1,30 @@
+@use "../../styles/mixins" as m;
+@use "../../styles/variables" as *;
+
+.formStyling {
+    @include m.flexBox(column, center, center, 0.5rem);
+
+    input {
+        border: 0;
+        outline: none;
+        padding: 0.7rem;
+        border-radius: 3px;
+        width: 50vw;
+    }
+
+    textarea {
+        border: 0;
+        resize: none;
+        outline: none;
+        height: 20vh;
+        width: 54vw;
+        border-radius: 3px;
+    }
+
+    input[type=submit] {
+        background: $button-color;
+        color: $white-color;
+        padding: 0.6rem 2rem;
+        width: 30vw;
+    }
+}
