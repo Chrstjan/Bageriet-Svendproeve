@@ -1,8 +1,16 @@
+@use "../../styles/variables" as *;
+
 .iconStyling {
   display: block;
 
   &.upArrow {
     width: 8vw;
     transform: rotate(-90deg);
+  }
+
+  &.inputIcon {
+    width: 6vw;
+    background: $light-blue-background;
+    padding: 0.2rem;
   }
 }

@@ -4,6 +4,7 @@
 
 .footerStyling {
   @include m.flexBox(column, center, center, 0rem);
+  margin-top: 4rem;
   position: static;
   bottom: 0;
   text-align: center;

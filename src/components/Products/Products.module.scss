@@ -3,6 +3,12 @@
 .productStyling {
   @include m.flexBox(column, center, center, 1rem);
 
+  header {
+    img {
+      width: 100%;
+    }
+  }
+
   .commentContainer {
     @include m.flexBox(row, center, center, 0.5rem);
   }

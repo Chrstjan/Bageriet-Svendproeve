@@ -1,4 +1,6 @@
 .wrapperStyling {
+  // min-height: 100vh;
+  
   &.productsContainer {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
