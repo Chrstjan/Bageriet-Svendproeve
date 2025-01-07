@@ -1,20 +1,18 @@
-import { useForm } from "react-hook-form"
-import s from "./ContactForm.module.scss";
+import { useForm } from "react-hook-form";
+import s from "./LoginForm.module.scss"
 
-export const ContactForm = () => {
+export const LoginForm = () => {
     const {
-        register,
-        handleSubmit,
-        formState: {errors},
-    } = useForm({
-        mode: "all",
-    });
-
-    const handleFormSubmit = async (data) => {
-        console.log(data);
-
-        const { username, email } = {...data}
-    }
+            register,
+            handleSubmit,
+            formState: {errors},
+        } = useForm({
+            mode: "all",
+        });
+    
+        const handleFormSubmit = async (data) => {
+            console.log(data);
+        }
 
   return (
     <form onSubmit={handleSubmit(handleFormSubmit)} className={s.formStyling}>
@@ -32,7 +30,7 @@ export const ContactForm = () => {
          type="text" name="name" id="name" placeholder="Dit navn..."/>
          {errors.name ? <span>{errors.name.message}</span> : null}
 
-        <input
+         <input
         {...register("email", {
             required: "Du skal udfylde din email",
             pattern: {
@@ -46,21 +44,7 @@ export const ContactForm = () => {
          type="email" name="email" id="email" placeholder="Din e-mail..."/>
          {errors.email ? <span>{errors.email.message}</span> : null}
 
-        <textarea {...register("message", {
-            required: "Du skal skrive en besked",
-            pattern: {
-                message: "Ikke gyldig besked format"
-            },
-            minLength: {
-                value: 10,
-                message: "Din besked skal være mindst 10 karakter"
-            }
-        })}>
-        </textarea>
-         {errors.message ? <span>{errors.message.message}</span> : null}
-         <span>
-            <input type="submit" value="Send"/>
-         </span>
+         <input type="submit" value="Login"/>
     </form>
   )
 }
