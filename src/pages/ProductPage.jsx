@@ -30,6 +30,20 @@ export const ProductPage = () => {
     return <h2>Error in fetch, try again</h2>;
   }
 
+  // useEffect(() => {
+  //   const getComments = async () => {
+  //     try {
+  //       const res = await fetch(`https://api.mediehuset.net/bakeonline/comments/${Object.values(productID)}`);
+  //       const data = await res.json();
+  //       console.log("Comments", data);
+  //     }
+  //     catch (error) {
+  //       console.error(`Error in fetching comments: ${error.message}`);
+  //     }
+  //   }
+  //   getComments();
+  // }, [])
+
   return (
     <>
       <Wrapper>

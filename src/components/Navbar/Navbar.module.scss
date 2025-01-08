@@ -5,11 +5,15 @@
 .hiddenStyling {
   li {
     display: none;
+
+    @media (min-width: 768px) {
+      display: block;
+    }
   }
 }
 
 .navStyling {
-  @include m.flexBox(row, space-evenly, center, 0.6rem);
+  @include m.flexBox(column, space-evenly, center, 0.6rem);
   @extend %LobsterFont;
   background: $background-color;
   margin: 0;
@@ -19,19 +23,46 @@
   padding-left: 2rem;
   overflow-x: scroll;
 
-  h2 {
+  @media (min-width: 768px) {
+    flex-direction: row;
+    justify-content: center;
+    overflow: hidden;
+    height: 6vh;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  h1 {
     @extend %headerText;
     font-size: 30px;
     margin: 0;
+
+    @media (min-width: 768px) {
+      font-size: 40px;
+      line-height: 0.5rem;
+    }
   }
 
   li {
     list-style-type: none;
 
+    @media (min-width: 768px) {
+      padding-right: 3rem;
+
+      &:first-child {
+        padding-right: 0;
+      }
+
+      &:nth-child(4) {
+        padding: 0rem 0rem 0rem 3rem;
+      }
+    }
+
     a {
       @extend %LobsterFont;
       color: $grey-color;
-      text-decoration: none;
       font-size: 14px;
       text-transform: uppercase;
     }

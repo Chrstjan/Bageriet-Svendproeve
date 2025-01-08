@@ -8,12 +8,31 @@
     img {
         width: 100vw;
         height: 30vh;
+
+        @media (min-width: 768px) {
+            height: 60vh;
+            object-fit: cover;
+        }
     }
 
     .arrowContainer {
         @include m.flexBox(row, space-between, center, 20rem);
         position: absolute;
         top: 40%;
+
+        img {
+            height: 4vh;
+            cursor: pointer;
+        }
+
+        @media (min-width: 768px) {
+            gap: 95vw;
+
+            img {
+                height: 3vh;
+                width: 2vw;
+            }
+        }
     }
 
     h2 {
@@ -25,6 +44,12 @@
         left: 50%;
         transform: translate(-50%, -50%);
         width: 300px;
+        text-shadow: 1px 2px #00000099;
+
+        @media (min-width: 768px) {
+            font-size: 40px;
+            width: auto;
+        }
     }
 
     .circleContainer {

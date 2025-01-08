@@ -10,9 +10,17 @@
     img {
         width: 50vw;
         border-radius: 50%;
+
+        @media (min-width: 768px) {
+            width: 10vw;
+        }
     }
 
     p {
         color: $light-grey;
+
+        @media (min-width: 768px) {
+            max-width: 260px;
+        }
     }
 }

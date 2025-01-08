@@ -4,6 +4,10 @@
   @include m.flexBox(column, center, center, 1rem);
 
   header {
+    h2 {
+      text-align: center;
+    }
+
     img {
       width: 100%;
     }

@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { Paths } from "../../router/Paths";
 import s from "./Navbar.module.scss";
 
@@ -16,7 +16,9 @@ export const Navbar = ({ isHidden }) => {
         <li>
           <NavLink to={"/produkter"}>Produkter</NavLink>
         </li>
-        <h2>Bageriet</h2>
+        <Link to="/">
+          <h1>Bageriet</h1>
+        </Link>
         <li>
           <NavLink to={"/kontakt"}>Kontakt</NavLink>
         </li>

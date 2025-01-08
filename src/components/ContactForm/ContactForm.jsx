@@ -12,8 +12,6 @@ export const ContactForm = () => {
 
     const handleFormSubmit = async (data) => {
         console.log(data);
-
-        const { username, email } = {...data}
     }
 
   return (

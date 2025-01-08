@@ -6,6 +6,10 @@
   top: 0;
   left: 1%;
 
+  @media (min-width: 786px) {
+    display: none;
+  }
+
   .barStyling {
     display: block;
     margin: 6px 3px;

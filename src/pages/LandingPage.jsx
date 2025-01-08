@@ -33,8 +33,8 @@ export const LandingPage = () => {
   return (
     <>
       <Slider />
-      <Wrapper>
-        <PageHeader headerText="Vi skaber lækkert! brød" subText="Der er mange tilgænglige udgaver af Lorem Ipsum, men de fleste udgaver har gennemgået forandringer, når nogen har tilføjet humor eller tilfældige ord, som på ingen måde ser ægte ud"/>
+      <PageHeader headerText="Vi skaber lækkert! brød" subText="Der er mange tilgænglige udgaver af Lorem Ipsum, men de fleste udgaver har gennemgået forandringer, når nogen har tilføjet humor eller tilfældige ord, som på ingen måde ser ægte ud"/>
+      <Wrapper type="infoWrapper">
         <Card src="/images/article.jpg" headerText="Kreativitet Dyrkes" subText="Der er mange tilgænglige udgaver af Lorem Ipsum, men de fleste udgaver har gennemgået forandringer, når nogen har"/>
         <Card src="/images/article2.jpg" headerText="Vi elsker brød" subText="Der er mange tilgænglige udgaver af Lorem Ipsum, men de fleste udgaver har gennemgået forandringer, når nogen har"/>
         <Card src="/images/article3.jpg" headerText="Sans for detaljer" subText="Der er mange tilgænglige udgaver af Lorem Ipsum, men de fleste udgaver har gennemgået forandringer, når nogen har"/>

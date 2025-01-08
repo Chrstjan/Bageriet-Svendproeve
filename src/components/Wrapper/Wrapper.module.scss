@@ -1,3 +1,5 @@
+@use "../../styles/mixins" as m;
+
 .wrapperStyling {
   // min-height: 100vh;
   
@@ -10,5 +12,12 @@
 
   &.loginWrapper {
     min-height: 60vh;
+  }
+
+  &.infoWrapper {
+    @include m.flexBox(column, center, center, 0rem);
+    @media (min-width: 768px) {
+      flex-direction: row;
+    }
   }
 }
